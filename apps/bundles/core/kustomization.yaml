@@ -27,4 +27,4 @@ resources:
   - ../../base/victoria-logs
   - ../../base/kyverno
 patches:
-  - path: docker-stable.yaml
+  - path: core.yaml
