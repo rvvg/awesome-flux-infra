@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  ## Base bundle
+  - ../../apps/bundles/core
+  ## Customs
+  #- flux-promotion
+  #- istio
+  #- pg-airflow
+  #- minio-loki
+  #- redis
+  #- clickhouse
+  # - valkey-sample
+patches:
+  #- path: victoria-metrics-k8s-stack/helm-release.yaml
+  # Example of removing a resource (reflector). PS: separate files because kinda bug https://github.com/kubernetes-sigs/kustomize/issues/5471
+  #- path: ../../apps/base/reflector/rm-reflector-ns.yaml
+  #- path: ../../apps/base/reflector/rm-reflector-release.yaml
+  #- path: ../../apps/base/reflector/rm-reflector-repo.yaml

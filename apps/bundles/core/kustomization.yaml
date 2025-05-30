@@ -1,0 +1,30 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../../base/victoria-metrics-k8s-stack
+  - ../../base/flux-monitoring
+  - ../../base/k8s-event-logger
+  - ../../base/metrics-server
+  - ../../base/blackbox-exporter
+  - ../../base/keda
+  - ../../base/istio
+  - ../../base/helm-exporter
+  - ../../base/cloudnative-pg
+  - ../../base/cert-manager
+  - ../../base/reflector
+  - ../../base/external-secrets
+  - ../../base/strimzi
+  - ../../base/pgadmin
+  - ../../base/minio-operator
+  - ../../base/loki
+  - ../../base/eck-operator
+  - ../../base/oomkill-exporter
+  - ../../base/x509-certificate-exporter
+  - ../../base/reloader
+  - ../../base/alloy
+  - ../../base/clickhouse-operator
+  - ../../base/httpbin
+  - ../../base/victoria-logs
+  - ../../base/kyverno
+patches:
+  - path: docker-stable.yaml
