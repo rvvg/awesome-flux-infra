@@ -8,6 +8,7 @@ resources:
   - ../../base/blackbox-exporter
   - ../../base/keda
   - ../../base/istio
+  - ../../base/kiali
   - ../../base/helm-exporter
   - ../../base/cloudnative-pg
   - ../../base/cert-manager
