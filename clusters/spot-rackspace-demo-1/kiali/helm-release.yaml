@@ -4,15 +4,6 @@ metadata:
   name: kiali-server
   namespace: istio-system
 spec:
-  releaseName: kiali-server
-  chart:
-    spec:
-      chart: kiali-server
-      sourceRef:
-        kind: HelmRepository
-        name: kiali
-        namespace: istio-system
-  interval: 15m
   # Default values
   values:
     server:
