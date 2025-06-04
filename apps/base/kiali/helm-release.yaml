@@ -10,7 +10,7 @@ spec:
       chart: kiali-server
       sourceRef:
         kind: HelmRepository
-        name: kiali-server
+        name: kiali
         namespace: istio-system
   interval: 15m
   # Default values
