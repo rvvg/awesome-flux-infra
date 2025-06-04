@@ -8,6 +8,7 @@ resources:
   # - istio
   #- pg-airflow
   - minio-loki
+  - kiali
   #- redis
   #- clickhouse
   # - valkey-sample
