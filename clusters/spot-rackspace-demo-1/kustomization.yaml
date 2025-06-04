@@ -21,3 +21,6 @@ patches:
   - path: kiali/helm-release.yaml
     target:
       kind: HelmRelease
+  - path: istio/helm-release.yaml
+    target:
+      kind: HelmRelease
