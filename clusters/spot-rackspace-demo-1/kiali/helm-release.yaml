@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: kiali-server
+  namespace: istio-system
+spec:
+  releaseName: kiali-server
+  chart:
+    spec:
+      chart: kiali-server
+      sourceRef:
+        kind: HelmRepository
+        name: kiali
+        namespace: istio-system
+  interval: 15m
+  # Default values
+  values:
+    server:
+      web_fqdn: example.com
+    external_services:
+      prometheus:
+        # Prometheus service name is "metrics" and is in the "telemetry" namespace
+        url: "http://vmsingle-victoria-metrics-k8s-stack.monitoring:8429"
